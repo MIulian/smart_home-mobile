@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/board_startID"
+    tools:ignore="ExtraText"
+    tools:context=".ui.BoardActivity">
+
+
+    <Button
+        android:id="@+id/buttonAddID"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/add_new"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/boards_textID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28dp"
+        android:text=""
+        android:layout_below="@id/buttonAddID"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/customRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/buttonAddID"
+        android:layout_above="@id/buttonExitID"/>
+
+    <Button
+        android:id="@+id/buttonExitID"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/exit"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        tools:ignore="MissingConstraints" />
+
+</RelativeLayout>

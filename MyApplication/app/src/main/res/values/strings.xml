@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Smart-Home-App</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="panouri_de_comanda">"Panouri de Comanda"</string>
+    <string name="board_id">"ID"</string>
+    <string name="board_name">"Name"</string>
+    <string name="board_serial">"Serial"</string>
+    <string name="board_start">"Ora de Start"</string>
+    <string name="board_contor">"Contor"</string>
+    <string name="board_autostart">"Autostart"</string>
+    <string name="board_off">"On/Off"</string>
+    <string name="add_new">Adauga un Panou</string>
+    <string name="exit">Iesire</string>
+    <string name="edit">Editare</string>
+    <string name="delete">Sterge</string>
+    <string name="salveaza">Salveaza</string>
+    <string name="inapoi">Inapoi</string>
+
+</resources>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailActivity">
+
+    <TextView
+        android:id="@+id/textNameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/board_name"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editNameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@id/textNameID"
+        android:ems="10"
+        android:inputType="textNoSuggestions" />
+
+    <TextView
+        android:id="@+id/textSerialID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textNameID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="19dp"
+        android:text="@string/board_serial"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editSerialID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editNameID"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/textSerialID"
+        android:ems="10"
+        android:enabled="false" />
+
+    <TextView
+        android:id="@+id/textStartID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textSerialID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/board_start"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editStartID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="time"
+        android:layout_toEndOf="@id/textStartID"
+        android:layout_below="@id/editSerialID"/>
+
+    <TextView
+        android:id="@+id/textAutoStartID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textStartID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/board_autostart"
+        android:textSize="30sp" />
+
+    <Switch
+        android:id="@+id/switchAutostartID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editStartID"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="19dp"
+        android:layout_toEndOf="@id/textAutoStartID"
+        android:text="NU/DA" />
+
+    <TextView
+        android:id="@+id/textContorID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textAutoStartID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="9dp"
+        android:text="@string/board_contor"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editContorID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchAutostartID"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="19dp"
+        android:layout_toEndOf="@id/textContorID"
+        android:ems="10"
+        android:inputType="textNoSuggestions" />
+
+    <TextView
+        android:id="@+id/textOffID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textContorID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="9dp"
+        android:text="@string/board_off"
+        android:textSize="30sp" />
+
+    <Switch
+        android:id="@+id/switchOffID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editContorID"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="13dp"
+        android:layout_toEndOf="@id/textAutoStartID"
+        android:text="OFF/ON" />
+
+    <Button
+        android:id="@+id/edit_buttonSaveID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchOffID"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/salveaza"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/edit_buttonBackID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchOffID"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/inapoi"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/edit_buttonDeleteID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchOffID"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/delete"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/edit_textErrorID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:text=""
+        android:layout_below="@id/edit_buttonSaveID"/>
+
+</RelativeLayout>
