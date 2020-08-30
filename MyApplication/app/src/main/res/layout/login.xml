@@ -26,10 +26,19 @@
         android:id="@+id/loginID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
+        android:text="@string/login"
         android:textSize="18sp"
         android:layout_marginTop="250dp"
-        android:layout_marginLeft="130dp"/>
+        android:layout_marginLeft="190dp"/>
+
+    <Button
+        android:id="@+id/userNouID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_nou"
+        android:textSize="18sp"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="80dp"/>
 
 
 </RelativeLayout>

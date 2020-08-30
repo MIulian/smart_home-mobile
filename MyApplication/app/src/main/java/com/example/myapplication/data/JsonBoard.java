@@ -7,12 +7,30 @@ public class JsonBoard extends Board{
     @SerializedName("result")
      Board board;
 
-    public JsonBoard(String username, Integer boardId, String boardName, String boardSerial, String boardStart, Integer boardAutoStart, Integer boardContor, Integer boardOff) {
-        super(username, boardId, boardName, boardSerial, boardStart, boardAutoStart, boardContor, boardOff);
+    public JsonBoard(String username,
+                     Integer boardId,
+                     String boardName,
+                     String boardSerial,
+                     String boardStart,
+                     String boardStartDate,
+                     String boardRunTime,
+                     boolean boardAutoStart,
+                     Integer boardContor,
+                     boolean boardOff) {
+        super(username,
+                boardId,
+                boardName,
+                boardSerial,
+                boardStart,
+                boardStartDate,
+                boardRunTime,
+                boardAutoStart,
+                boardContor,
+                boardOff);
     }
 
-    public JsonBoard(String username, String boardName, String boardSerial, String boardStart, Integer boardAutoStart, Integer boardContor, Integer boardOff) {
-        super(username, boardName, boardSerial, boardStart, boardAutoStart, boardContor, boardOff);
+    public JsonBoard(String username, String boardName, String boardSerial, String boardStart, String boardStartDate, String boardRunTime, boolean boardAutoStart, Integer boardContor, boolean boardOff) {
+        super(username, boardName, boardSerial, boardStart, boardStartDate, boardRunTime,boardAutoStart, boardContor, boardOff);
     }
 
     public Board getBoard() {

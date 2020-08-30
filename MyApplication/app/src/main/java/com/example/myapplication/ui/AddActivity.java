@@ -67,24 +67,20 @@ public class AddActivity extends AppCompatActivity  {
         EditText boardSerialText = (EditText) findViewById(R.id.editSerialID);
         Switch boardSwitchAuto = (Switch) findViewById(R.id.switchAutostartID);
         EditText boardStartText = (EditText) findViewById(R.id.editStartID);
+        EditText boardStartDateText = (EditText) findViewById(R.id.editStartDateID);
+        EditText boardRunTimeText = (EditText) findViewById(R.id.editRunTimeID);
         EditText boardContorText = (EditText) findViewById(R.id.editContorID);
         Integer contor = Integer.valueOf(boardContorText.getText().toString());
         Switch boardSwitchOff = (Switch) findViewById(R.id.switchOffID);
-        int auto = 0;
-        int off = 0;
-        if(boardSwitchAuto.isChecked()){
-            auto = 1;
-        }
-        if(boardSwitchOff.isChecked()) {
-            off = 1;
-        }
         Board newBoard = new Board(userName,
                 boardNameText.getText().toString(),
                 boardSerialText.getText().toString(),
                 boardStartText.getText().toString(),
-                auto,
+                boardStartDateText.getText().toString(),
+                boardRunTimeText.getText().toString(),
+                boardSwitchAuto.isChecked(),
                 contor,
-                off);
+                boardSwitchOff.isChecked());
         Call<JsonBoard> call = apiService.saveBoard(newBoard);
 
         call.enqueue(new Callback<JsonBoard>() {

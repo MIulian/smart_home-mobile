@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:visibility="visible"
     tools:context=".ui.AddActivity">
 
     <TextView
@@ -62,17 +63,63 @@
         android:id="@+id/editStartID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/editSerialID"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/textStartID"
         android:ems="10"
         android:hint="23:59:00"
-        android:inputType="textNoSuggestions"
-        android:layout_toEndOf="@id/textStartID"
-        android:layout_below="@id/editSerialID"/>
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/textStartDateID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textStartID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/date_de_start"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editStartDateID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editStartID"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="3dp"
+        android:layout_toEndOf="@id/textStartDateID"
+        android:ems="10"
+        android:hint="an-luna-ziua"
+        android:inputType="datetime" />
+
+    <TextView
+        android:id="@+id/textRunTimeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textStartDateID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/timpul_de_functionare"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editRunTimeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editStartDateID"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/textRunTimeID"
+        android:ems="10"
+        android:hint="numarul de minute"
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/textAutoStartID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textStartID"
+        android:layout_below="@+id/textRunTimeID"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:text="@string/board_autostart"
@@ -82,9 +129,9 @@
         android:id="@+id/switchAutostartID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editStartID"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="19dp"
+        android:layout_below="@id/editRunTimeID"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
         android:layout_toEndOf="@id/textAutoStartID"
         android:text="NU/DA" />
 
@@ -98,17 +145,18 @@
         android:text="@string/board_contor"
         android:textSize="30sp" />
 
+
     <EditText
         android:id="@+id/editContorID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/switchAutostartID"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="11dp"
         android:layout_toEndOf="@id/textContorID"
         android:ems="10"
         android:hint="2"
-        android:inputType="textNoSuggestions" />
+        android:inputType="number" />
 
     <TextView
         android:id="@+id/textOffID"
@@ -125,8 +173,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editContorID"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="15dp"
         android:layout_toEndOf="@id/textAutoStartID"
         android:text="OFF/ON" />
 
@@ -135,8 +183,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/switchOffID"
-        android:layout_marginTop="50dp"
         android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
         android:text="@string/salveaza"
         android:textSize="16sp" />
 
@@ -154,8 +202,8 @@
         android:id="@+id/textErrorID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="28sp"
+        android:layout_below="@id/buttonSaveID"
         android:text=""
-        android:layout_below="@id/buttonSaveID"/>
+        android:textSize="28sp" />
 
 </RelativeLayout>

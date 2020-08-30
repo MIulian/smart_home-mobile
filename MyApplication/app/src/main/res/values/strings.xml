@@ -9,7 +9,7 @@
     <string name="board_name">"Name"</string>
     <string name="board_serial">"Serial"</string>
     <string name="board_start">"Ora de Start"</string>
-    <string name="board_contor">"Contor"</string>
+    <string name="board_contor" translatable="false">"Contor"</string>
     <string name="board_autostart">"Autostart"</string>
     <string name="board_off">"On/Off"</string>
     <string name="add_new">Adauga un Panou</string>
@@ -18,5 +18,26 @@
     <string name="delete">Sterge</string>
     <string name="salveaza">Salveaza</string>
     <string name="inapoi">Inapoi</string>
+    <string name="data_de_start">Data de Start</string>
+    <string name="timpul_de_functionare">Pornit</string>
+    <string name="login">LOGIN</string>
+    <string name="user_nou">User Nou</string>
+    <string name="adresa_email">Adresa-Email</string>
+    <string name="nume_utilizator">Nume Utilizator</string>
+    <string name="prenume">Prenume</string>
+    <string name="nume_familie">Nume Familie</string>
+    <string name="varsta">Varsta</string>
+    <string name="adreasa">Adreasa</string>
+    <string name="nr_telefon">Nr. telefon</string>
+    <string name="nume">Nume</string>
+    <string name="utilizator">Utilizator</string>
+    <string name="date_de_start">Date de Start</string>
+    <string name="value">VALOARE</string>
+    <string-array name="contor">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
 
 </resources>

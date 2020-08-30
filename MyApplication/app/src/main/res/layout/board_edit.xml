@@ -66,10 +66,52 @@
         android:layout_below="@id/editSerialID"/>
 
     <TextView
-        android:id="@+id/textAutoStartID"
+        android:id="@+id/textStartDateID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textStartID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/data_de_start"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editStartDateID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editStartID"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@id/textStartDateID"
+        android:ems="10"
+        android:inputType="datetime" />
+
+    <TextView
+        android:id="@+id/textRunTimeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textStartDateID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/timpul_de_functionare"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editRunTimeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editStartDateID"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="9dp"
+        android:layout_toEndOf="@id/textRunTimeID"
+        android:ems="10"
+        android:inputType="time" />
+
+    <TextView
+        android:id="@+id/textAutoStartID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textRunTimeID"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:text="@string/board_autostart"
@@ -79,9 +121,9 @@
         android:id="@+id/switchAutostartID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editStartID"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="19dp"
+        android:layout_below="@id/editRunTimeID"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="14dp"
         android:layout_toEndOf="@id/textAutoStartID"
         android:text="NU/DA" />
 

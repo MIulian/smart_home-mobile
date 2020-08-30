@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.UserNouActivity">
+
+    <TextView
+        android:id="@+id/textUserNameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/utilizator"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editUserNameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@id/textUserNameID"
+        android:ems="10"
+        android:hint="@string/nume_utilizator"
+        android:inputType="textNoSuggestions" />
+
+    <TextView
+        android:id="@+id/textEmailID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textUserNameID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="19dp"
+        android:text="@string/adresa_email"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editEmailID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editUserNameID"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@id/textEmailID"
+        android:ems="10"
+        android:hint="@string/adresa_email"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/textFirstNameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textEmailID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/prenume"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editFirstNameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editEmailID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="13dp"
+        android:layout_toEndOf="@id/textFirstNameID"
+        android:ems="10"
+        android:hint="@string/prenume"
+        android:inputType="textNoSuggestions" />
+
+    <TextView
+        android:id="@+id/textLastNameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textFirstNameID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/nume_familie"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editLastNameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/nume_familie"
+        android:inputType="textNoSuggestions"
+        android:layout_toEndOf="@id/textLastNameID"
+        android:layout_below="@id/editFirstNameID"/>
+    <TextView
+        android:id="@+id/textAgeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textLastNameID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="@string/varsta"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editAgeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editLastNameID"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@id/textAgeID"
+        android:ems="10"
+        android:hint="@string/varsta"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textAdressID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textAgeID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/adreasa"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editAdressID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editAgeID"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@id/textAdressID"
+        android:ems="10"
+        android:hint="@string/adreasa"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textPhoneID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textAdressID"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="9dp"
+        android:text="@string/nr_telefon"
+        android:textSize="30sp" />
+
+
+    <EditText
+        android:id="@+id/editPhoneID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editAdressID"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/textPhoneID"
+        android:ems="10"
+        android:hint="@string/nr_telefon"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/buttonSaveUserID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editPhoneID"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/salveaza"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/buttonBackUserID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editPhoneID"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/inapoi"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textErrorUserID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:text=""
+        android:layout_below="@id/buttonSaveUserID"/>
+
+</RelativeLayout>

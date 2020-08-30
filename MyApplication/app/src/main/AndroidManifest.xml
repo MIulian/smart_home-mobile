@@ -12,9 +12,10 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.DetailActivity"></activity>
-        <activity android:name=".ui.BoardActivity"></activity>
-        <activity android:name=".ui.AddActivity"></activity>
+        <activity android:name=".ui.DetailActivity" />
+        <activity android:name=".ui.BoardActivity" />
+        <activity android:name=".ui.AddActivity" />
+        <activity android:name=".ui.UserNouActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

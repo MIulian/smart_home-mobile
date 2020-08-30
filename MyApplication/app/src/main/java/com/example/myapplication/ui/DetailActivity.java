@@ -15,6 +15,8 @@ import com.example.myapplication.data.Board;
 import com.example.myapplication.data.JsonBoard;
 import com.example.myapplication.network.BoardApiService;
 
+import java.text.DecimalFormat;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -84,6 +86,8 @@ public class DetailActivity extends AppCompatActivity {
         final EditText boardSerialText = (EditText) findViewById(R.id.editSerialID);
         final Switch boardSwitchAuto = (Switch) findViewById(R.id.switchAutostartID);
         final EditText boardStartText = (EditText) findViewById(R.id.editStartID);
+        final EditText boardStartDateText = (EditText) findViewById(R.id.editStartDateID);
+        final EditText boardRunTimeText = (EditText) findViewById(R.id.editRunTimeID);
         final EditText boardContorText = (EditText) findViewById(R.id.editContorID);
         final Switch boardSwitchOff = (Switch) findViewById(R.id.switchOffID);
 
@@ -100,18 +104,12 @@ public class DetailActivity extends AppCompatActivity {
                 if (board != null) {
                     boardNameText.setText(board.getBoardName());
                     boardSerialText.setText(board.getBoardSerial());
-                    if (board.getBoardAutoStart() == 1){
-                        boardSwitchAuto.setChecked(true);
-                    }else {
-                        boardSwitchAuto.setChecked(false);
-                    }
+                    boardSwitchAuto.setChecked(board.getBoardAutoStart());
                     boardStartText.setText(board.getBoardStart());
-                    boardContorText.setText(board.getBoardContor().toString());
-                    if (board.getBoardOff() == 1){
-                        boardSwitchOff.setChecked(true);
-                    }else {
-                        boardSwitchOff.setChecked(false);
-                    }
+                    boardStartDateText.setText(board.getBoardStartDate());
+                    boardRunTimeText.setText(board.getBoardRunTime());
+                    boardContorText.setText(String.valueOf(board.getBoardContor()));
+                    boardSwitchOff.setChecked(board.getBoardOff());
                 }
 
             }
@@ -134,24 +132,21 @@ public class DetailActivity extends AppCompatActivity {
         EditText boardSerialText = (EditText) findViewById(R.id.editSerialID);
         Switch boardSwitchAuto = (Switch) findViewById(R.id.switchAutostartID);
         EditText boardStartText = (EditText) findViewById(R.id.editStartID);
+        EditText boardStartDateText = (EditText) findViewById(R.id.editStartDateID);
+        EditText boardRuntimeText = (EditText) findViewById(R.id.editRunTimeID);
         EditText boardContorText = (EditText) findViewById(R.id.editContorID);
         Integer contor = Integer.valueOf(boardContorText.getText().toString());
         Switch boardSwitchOff = (Switch) findViewById(R.id.switchOffID);
-        int auto = 0;
-        int off = 0;
-        if(boardSwitchAuto.isChecked()){
-            auto = 1;
-        }
-        if(boardSwitchOff.isChecked()) {
-            off = 1;
-        }
+
         Board newBoard = new Board(userName,
                 boardNameText.getText().toString(),
                 boardSerialText.getText().toString(),
                 boardStartText.getText().toString(),
-                auto,
+                boardStartDateText.getText().toString(),
+                runTimeSet(boardRuntimeText.getText().toString()),
+                boardSwitchAuto.isChecked(),
                 contor,
-                off);
+                boardSwitchOff.isChecked());
         Call<JsonBoard> call = apiService.editBoard(newBoard);
 
         call.enqueue(new Callback<JsonBoard>() {
@@ -193,6 +188,19 @@ public class DetailActivity extends AppCompatActivity {
                 errorText.setText(t.getMessage());
             }
         });
+    }
+    public String runTimeSet ( String runTime){
+        String result = "";
+        if(runTime != null && !(runTime.equals(" "))) {
+            int time = Integer.valueOf(runTime);
+            int hour = 00 ;
+            int min = 00 ;
+            DecimalFormat form = new DecimalFormat("00");
+            hour = (time / 60);
+            min = (time - (hour * 60));
+            result = form.format(hour)+":"+form.format(min);
+        }
+        return result;
     }
 
 }

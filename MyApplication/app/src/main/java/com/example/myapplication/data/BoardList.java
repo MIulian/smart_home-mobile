@@ -8,8 +8,8 @@ public class BoardList extends Board{
     @SerializedName("result")
     private List<Board> boards;
 
-    public BoardList(String username, Integer boardId, String boardName, String boardSerial, String boardStart, Integer boardAutoStart, Integer boardContor, Integer boardOff) {
-        super(username, boardId, boardName, boardSerial, boardStart, boardAutoStart, boardContor, boardOff);
+    public BoardList(String username, Integer boardId, String boardName, String boardSerial, String boardStart, String boardStartDate, String boardRunTime, boolean boardAutoStart, Integer boardContor, boolean boardOff) {
+        super(username, boardId, boardName, boardSerial, boardStart, boardStartDate, boardRunTime, boardAutoStart, boardContor, boardOff);
     }
 
     public List<Board> getBoards() {

@@ -28,7 +28,7 @@ public class CustomAdapterBoard extends RecyclerView.Adapter<CustomAdapterBoard.
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        TextView txtTitle, txtHour;
+        TextView txtTitle, txtHour, txtDate;
         ImageView coverImage;
         OnBoardListener boardListener;
 
@@ -37,6 +37,7 @@ public class CustomAdapterBoard extends RecyclerView.Adapter<CustomAdapterBoard.
 
             txtTitle = itemView.findViewById(R.id.board_nameID);
             txtHour = itemView.findViewById(R.id.board_hourID);
+            txtDate = itemView.findViewById(R.id.board_dateID);
             coverImage = itemView.findViewById(R.id.board_imageID);
             this.boardListener = boardListener;
 
@@ -59,6 +60,7 @@ public class CustomAdapterBoard extends RecyclerView.Adapter<CustomAdapterBoard.
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.txtTitle.setText(dataList.get(position).getBoardName());
+        holder.txtDate.setText(dataList.get(position).getBoardStartDate());
         holder.txtHour.setText(dataList.get(position).getBoardStart());
 
         Picasso.Builder builder = new Picasso.Builder(context);
@@ -67,16 +69,6 @@ public class CustomAdapterBoard extends RecyclerView.Adapter<CustomAdapterBoard.
                 .placeholder((R.drawable.boardimg))
                 .error(R.drawable.ic_launcher_background)
                 .into(holder.coverImage);
-//        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(context, DetailActivity.class);
-//                intent.putExtra("userName", dataList.get(position).getUsername());
-//                intent.putExtra("serial", dataList.get(position).getBoardSerial());
-//                intent.putExtra("id", dataList.get(position).getBoardId());
-//                context.startActivity(intent);
-//            }
-//        });
     }
 
     @Override

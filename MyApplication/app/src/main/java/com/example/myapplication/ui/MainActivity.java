@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.login);
 
         final Intent intent = new Intent(this, BoardActivity.class);
+        final Intent intent2 = new Intent(this, UserNouActivity.class);
         Button btn_login = (Button) findViewById(R.id.loginID);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
                 userName = userText.getText().toString();
                 intent.putExtra("userName", MainActivity.this.userName);
                 startActivity(intent);
+            }
+        });
+
+        Button btn_create = (Button) findViewById(R.id.userNouID);
+        btn_create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent2);
             }
         });
     }
